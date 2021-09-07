@@ -1,0 +1,115 @@
+:root {
+  --cellSize: 5vh;
+  --cellColor: cadetblue;
+  --indexColor: burlywood;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#canvas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#title {
+  display: flex;
+  justify-content: center;
+  font-family: "Press Start 2P", cursive;
+  font-size: 2rem;
+  height: 6rem;
+  align-items: center;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+}
+#settings {
+  display: flex;
+  padding: 1rem;
+  background-color: white;
+  align-items: center;
+}
+#go {
+  height: 3rem;
+  width: 15rem;
+  background-color: rgb(104, 104, 104);
+  margin: 2rem;
+  color: white;
+  font-size: 1.5rem;
+}
+#main {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  height: 50vh;
+  opacity: 0.8;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      rgba(0, 0, 255, 0.5),
+      rgba(255, 255, 0, 0.5)
+    ),
+    url("/images/building.png");
+}
+#gridSize {
+  width: 2rem;
+}
+#grid {
+  height: 100%;
+  opacity: 0.8;
+  display: block;
+}
+
+.row {
+  display: flex;
+}
+.index {
+  width: var(--cellSize);
+  height: var(--cellSize);
+  border: solid 2px white;
+  background-color: var(--cellColor);
+}
+.cell {
+  width: var(--cellSize);
+  height: var(--cellSize);
+  border: solid 2px black;
+  background-color: var(--indexColor);
+  text-align: center;
+  line-height: 3rem;
+  font-size: 1.5rem;
+}
+.index input {
+  width: calc(var(--cellSize) - 5px);
+  height: calc(var(--cellSize) - 5px);
+  background-color: transparent;
+  padding: 2%;
+  font-size: large;
+  border: none;
+  text-align: center;
+}
+input:focus {
+  outline-width: 0;
+}
+
+.corner {
+  background-color: transparent;
+  border: solid 2px transparent;
+}
+
+.errors {
+  color: red;
+  text-align: center;
+  line-height: 3rem;
+}
